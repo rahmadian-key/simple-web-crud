@@ -7,19 +7,21 @@
 				 <thead>
 				 <tr>
 					 <th scope="col">#</th>
-					 <th scope="col">Nama</th>
-					 <th scope="col">Harga</th>
-					 <th scope="col">Stok</th>
+					 <th scope="col">Nama Konsumen</th>
+					 <th scope="col">Nama Barang</th>
+					 <th scope="col">Jumlah Beli</th>
+					 <th scope="col">Tanggal Beli</th>
 					 <th scope="col">Aksi</th>
 				 </tr>
 			</thead>
 			<tbody>
-				<?php foreach( $barang as $brg ) : ?>
+				<?php foreach( $transaksi as $tsk ) : ?>
 				 <tr>
-					 <th scope="row"><?= $brg["no"] ?></th>
-					 <td><?= $brg["nama_brg"] ?></td>
-					 <td><?= $brg["harga"] ?></td>
-					 <td><?= $brg["stok"] ?></td>
+					 <th scope="row"><?= $tsk["no"] ?></th>
+					 <td><?= $tsk["konsumen"] ?></td>
+					 <td><?= $tsk["nama_brg"] ?></td>
+					 <td><?= $tsk["jumlah"] ?></td>
+					 <td><?= $tsk["tgl_beli"] ?></td>
 					 <td>
 						<button type="button" class="btn btn-success">Edit</button>
 						<button type="button" class="btn btn-danger">Hapus</button>
@@ -31,5 +33,4 @@
 		</div>
 		</div>
 	</div>
-
 </div>

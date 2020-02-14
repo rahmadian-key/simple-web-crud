@@ -24,11 +24,11 @@
     			<div class="navbar-nav">
      				<a class="nav-item nav-link" href="<?= base_url(); ?>">Home 
      				</a>
-     				<a class="nav-item nav-link" href="#">Data Barang
+     				<a class="nav-item nav-link" href="<?= base_url(); ?>barang">Data Barang
      				</a>
      				<a class="nav-item nav-link" href="<?= base_url(); ?>konsumen">Data Konsumen
      				</a>
- 					<a class="nav-item nav-link" href="#">Data Transaksi
+ 					<a class="nav-item nav-link" href="<?= base_url(); ?>transaksi">Data Transaksi
  					</a>
     			</div>
  			 </div>
