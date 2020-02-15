@@ -1,5 +1,8 @@
 <div class="container">
-
+	<?php if(!$barang['no']) :
+		redirect('barang');
+	else:
+		?>
 	<div class="row mt-5">
 		<div class="col-md-6 mx-auto">
 			<div class="card">
@@ -24,5 +27,5 @@
 			</div>
 		</div>
 	</div>
-
+<?php endif ?>
 </div>

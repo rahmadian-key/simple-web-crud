@@ -1,5 +1,8 @@
 <div class="container">
-
+	<?php if(!$transaksi['no']) :
+		redirect('transaksi');
+	else:
+		?>
 	<div class="row mt-5">
 		<div class="col-md-6 mx-auto">
 			<div class="card">
@@ -38,7 +41,7 @@
 						</div>
 						<div class="form-group">
 							<label for="jumlah">Tanggal Beli: </label>
-							<input type="datetime-local" class="form-control" id="tgl_ambil" name="tgl_ambil">
+							<input type="date" class="form-control" id="tgl_ambil" min="1990-01-01" max="2090-12-12" name="tgl_ambil" value="<?= date('Y-m-d H:i', strtotime($transaksi["tgl_ambil"]))?>" >
 						</div>
 						<button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
 					</form>
@@ -46,5 +49,5 @@
 			</div>
 		</div>
 	</div>
-
+<?php endif ?>
 </div>

@@ -55,7 +55,7 @@
 		public function editdatatransaksi()
 		{
 		$data = [
-			'nama' => $this->input->post('nama', true),
+			'konsumen' => $this->input->post('nama', true),
 			'nama_brg' => $this->input->post('nama_brg', true),	
 			'tgl_ambil' => $this->input->post('tgl_ambil')
     	];

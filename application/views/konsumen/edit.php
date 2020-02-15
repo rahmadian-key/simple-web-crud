@@ -1,4 +1,8 @@
 <div class="container">
+	<?php if(!$konsumen['no']) :
+		redirect('konsumen');
+	else:
+		?>
 
 	<div class="row mt-5">
 		<div class="col-md-6 mx-auto">
@@ -28,5 +32,5 @@
 			</div>
 		</div>
 	</div>
-
+<?php endif ?>
 </div>

@@ -44,7 +44,7 @@
 					</td>
 					<td>
 						<?php foreach($barang as $brg): 
-					 	if($tsk["konsumen"] == $brg["no"]) :
+					 	if($tsk["nama_brg"] == $brg["no"]) :
 					 		echo $brg["nama_brg"]; 
 					 	endif;
 					 	endforeach;
