@@ -13,20 +13,27 @@
 					</div>
 				<?php } ?>
 					<form action="" method="post">
+							<input type="hidden" name="no" value="<?= $transaksi["no"]; ?>" /> 
 						<div class="form-group" >
 							<label for="nama">Nama Konsumen: </label>
 							<select class="form-control" name="nama" id="nama">
 								<?php foreach($konsumen as $kns) : ?>
-									<option value="<?= $kns['no']; ?>"><?= $kns['nama']; ?></option>
-								<?php endforeach ?>
+								<?php if($kns['no']==$transaksi['nama_brg']): ?>
+									<option value="<?= $kns['no']; ?>" selected><?= $kns['nama']; ?></option>
+								<?php else: ?>
+									<option value="<?= $kns['no']; ?>" ><?= $kns['nama']; ?></option>
+								<?php endif; endforeach ?>
 							</select> 
 						</div>
 						<div class="form-group">
 							<label for="no_hp">Nama Barang: </label>
 							<select class="form-control" name="nama_brg" id="nama_brg">
 								<?php foreach($barang as $brg) : ?>
-									<option value="<?= $brg['no']; ?>"><?= $brg['nama_brg']; ?></option>
-								<?php endforeach ?>
+								<?php if($brg['no']==$transaksi['nama_brg']): ?>
+									<option value="<?= $brg['no']; ?>" selected><?= $brg['nama_brg']; ?></option>
+								<?php else: ?>
+									<option value="<?= $brg['no']; ?>" ><?= $brg['nama_brg']; ?></option>
+								<?php endif; endforeach ?>
 							</select> 
 						</div>
 						<div class="form-group">

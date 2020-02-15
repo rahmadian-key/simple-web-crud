@@ -33,11 +33,26 @@
 			<tbody>
 				<?php $i=1; foreach( $transaksi as $tsk ) : ?>
 				 <tr>
-					 <th scope="row"><?= $i ?></th>
-					 <td><?= $tsk["konsumen"] ?></td>
-					 <td><?= $tsk["nama_brg"] ?></td>
-					 <td><?= $tsk["tgl_ambil"] ?></td>
-					 <td>
+					<th scope="row"><?= $i ?></th>
+					<td>
+					 	<?php foreach($konsumen as $kns): 
+					 	if($tsk["konsumen"] == $kns["no"]) :
+					 		echo $kns["nama"]; 
+					 	endif;
+					 	endforeach;
+					 	?>
+					</td>
+					<td>
+						<?php foreach($barang as $brg): 
+					 	if($tsk["konsumen"] == $brg["no"]) :
+					 		echo $brg["nama_brg"]; 
+					 	endif;
+					 	endforeach;
+					 	?>
+							
+					</td>
+					<td><?= $tsk["tgl_ambil"] ?></td>
+					<td>
 						<a href="<?= base_url(); ?>transaksi/edit/<?= $tsk["no"]; ?>" class="btn btn-success">Edit</a>
 						<a href="<?= base_url(); ?>transaksi/hapus/<?= $tsk["no"]; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda ingin menghapus data ini?');">Hapus</a>
 					</td>
