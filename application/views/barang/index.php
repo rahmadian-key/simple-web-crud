@@ -1,5 +1,5 @@
 <div class="container mx-auto">
-	<div class="row mt-3">
+	<div class="row mt-5">
 		<div class="col-md-12">
 			<h3><?= $judul; ?></h3>
 			<div class="col-md-10 mx-auto">

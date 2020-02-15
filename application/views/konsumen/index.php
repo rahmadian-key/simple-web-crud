@@ -1,7 +1,13 @@
-<div class="container mx-auto">
-	<div class="row mt-3">
+<div class="container">
+	<div class="row mt-5">
 		<div class="col-md-12">
 			<h3><?= $judul; ?></h3>
+			<div class="col-md-12 mx-auto">
+				<div class="row mt-5 mb-3 offset-md-8">
+					<div class="col-md-12">
+						<a href="<?= base_url(); ?>konsumen/tambah" class="btn btn-primary">Tambah <?= $judul; ?></a>
+					</div>
+				</div>
 			<div class="col-md-10 mx-auto">
 			<table class="table">
 				 <thead>
@@ -28,6 +34,8 @@
 				<?php endforeach ?>
 			 </tbody>
 			</table>
+			</div>
+		</div>
 		</div>
 		</div>
 	</div>
