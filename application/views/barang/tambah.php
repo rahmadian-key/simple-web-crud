@@ -18,12 +18,12 @@
 							<input type="text" class="form-control" id="nama" name="nama" />
 						</div>
 						<div class="form-group">
-							<label for="no_hp">No. HP</label>
-							<input type="text" class="form-control" id="no_hp" name="no_hp" />
+							<label for="harga">Harga</label>
+							<input type="text" class="form-control" id="harga" name="harga" />
 						</div>
 						<div class="form-group">
-							<label for="saldo">Saldo</label>
-							<input type="number" class="form-control" id="saldo" name="saldo" />
+							<label for="stok">Stok</label>
+							<input type="stok" class="form-control" id="stok" name="stok" />
 						</div>
 						<button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
 					</form>

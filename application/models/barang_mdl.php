@@ -8,6 +8,18 @@
 			$query = $this->db->get('data_barang');
 			return $query->result_array();
 		}
+
+		public function tambahDataBarang()
+		{
+
+			$data = [
+        'nama_brg' => $this->input->post('nama', true),
+        'harga' => $this->input->post('harga', true),
+        'stok' => $this->input->post('stok', true)		
+    	];
+
+    	$this->db->insert('data_barang', $data);
+		}
 	}
 
 
