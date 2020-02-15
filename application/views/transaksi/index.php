@@ -15,19 +15,19 @@
 				 </tr>
 			</thead>
 			<tbody>
-				<?php foreach( $transaksi as $tsk ) : ?>
+				<?php $i=1; foreach( $transaksi as $tsk ) : ?>
 				 <tr>
-					 <th scope="row"><?= $tsk["no"] ?></th>
+					 <th scope="row"><?= $i ?></th>
 					 <td><?= $tsk["konsumen"] ?></td>
 					 <td><?= $tsk["nama_brg"] ?></td>
 					 <td><?= $tsk["jumlah"] ?></td>
 					 <td><?= $tsk["tgl_beli"] ?></td>
 					 <td>
 						<button type="button" class="btn btn-success">Edit</button>
-						<button type="button" class="btn btn-danger">Hapus</button>
+						<a href="<?= base_url(); ?>transaksi/hapus/<?= $tsk["no"]; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda ingin menghapus data ini?');">Hapus</a>
 					</td>
 				 </tr>
-				<?php endforeach ?>
+				<?php $i+=1; endforeach ?>
 			 </tbody>
 			</table>
 		</div>

@@ -9,7 +9,7 @@
 			return $query->result_array();
 		}
 
-		public function tambahDataKaryawan()
+		public function tambahDataKonsumen()
 		{
 
 			$data = [
@@ -19,6 +19,12 @@
     	];
 
     	$this->db->insert('data_konsumen', $data);
+		}
+
+		public function hapusDataKonsumen($no)
+		{
+			$this->db->where('no', $no);
+			$this->db->delete('data_konsumen');
 		}
 	}
 

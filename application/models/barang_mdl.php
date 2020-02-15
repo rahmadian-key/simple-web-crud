@@ -13,12 +13,18 @@
 		{
 
 			$data = [
-        'nama_brg' => $this->input->post('nama', true),
-        'harga' => $this->input->post('harga', true),
-        'stok' => $this->input->post('stok', true)		
-    	];
+				'nama_brg' => $this->input->post('nama', true),
+				'harga' => $this->input->post('harga', true),
+				'stok' => $this->input->post('stok', true)		
+	    	];
 
-    	$this->db->insert('data_barang', $data);
+    		$this->db->insert('data_barang', $data);
+		}
+
+		public function hapusDataBarang($no)
+		{
+			$this->db->where('no', $no);
+			$this->db->delete('data_barang');
 		}
 	}
 

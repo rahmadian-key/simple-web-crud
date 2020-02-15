@@ -31,8 +31,15 @@
 			else
 			{
 				$this->barang_mdl->tambahDataBarang();
+				$this->session->set_flashdata('flash','berhasil ditambahkan');
 				redirect('barang');
 			}
+		}
+		public function hapus($no)
+		{
+			$this->barang_mdl->hapusDataBarang($no);
+			$this->session->set_flashdata('flash','Dihapus');
+			redirect('barang');
 		}
 	}
 ?>

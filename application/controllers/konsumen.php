@@ -30,9 +30,16 @@
 			}
 			else
 			{
-				$this->konsumen_mdl->tambahDataKaryawan();
+				$this->konsumen_mdl->tambahDataKonsumen();
+				$this->session->set_flashdata('flash','berhasil ditambahkan');
 				redirect('konsumen');
 			}
+		}
+		public function hapus($no)
+		{
+			$this->konsumen_mdl->hapusDataKonsumen($no);
+			$this->session->set_flashdata('flash','Dihapus');
+			redirect('konsumen');
 		}
 	}
 ?>
