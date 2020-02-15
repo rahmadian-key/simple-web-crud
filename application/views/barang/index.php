@@ -25,8 +25,6 @@
 				 <tr>
 					 <th scope="col">#</th>
 					 <th scope="col">Nama</th>
-					 <th scope="col">Harga</th>
-					 <th scope="col">Stok</th>
 					 <th scope="col">Aksi</th>
 				 </tr>
 			</thead>
@@ -35,10 +33,8 @@
 				 <tr>
 					 <th scope="row"><?= $i ?></th>
 					 <td><?= $brg["nama_brg"] ?></td>
-					 <td><?= $brg["harga"] ?></td>
-					 <td><?= $brg["stok"] ?></td>
 					 <td>
-						<button type="button" class="btn btn-success">Edit</button>
+						<a href="<?= base_url(); ?>barang/edit/<?= $brg["no"]; ?>" class="btn btn-success">Edit</a>
 						<a href="<?= base_url(); ?>barang/hapus/<?= $brg["no"]; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda ingin menghapus data ini?');">Hapus</a>
 					</td>
 				 </tr>

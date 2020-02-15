@@ -13,15 +13,12 @@
 					</div>
 				<?php } ?>
 					<form action="" method="post">
+						<input type="hidden" name="no" value="<?= $barang["no"]; ?>" /> 
 						<div class="form-group">
-							<label for="nama">Nama</label>
-							<input type="text" class="form-control" id="nama" name="nama" />
+							<label for="nama_brg">Nama</label>
+							<input type="text" class="form-control" id="nama_brg" name="nama_brg" value="<?= $barang['nama_brg']; ?>"/>
 						</div>
-						<div class="form-group">
-							<label for="no_hp">No. HP</label>
-							<input type="text" class="form-control" id="no_hp" name="no_hp" />
-						</div>
-						<button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
+						<button type="submit" name="tambah" class="btn btn-primary float-right">Edit Data</button>
 					</form>
 				</div>
 			</div>

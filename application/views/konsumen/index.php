@@ -12,7 +12,7 @@
 					<div class="col-md-10 mx-auto">
 						<?php if($this->session->flashdata('flash')) { ?>
 							<div class="alert alert-primary alert-dismissible fade show" role="alert">
-								<?= $judul." ".$this->session->flashdata('flash'); ?>
+								<?= $judul." berhasil ".$this->session->flashdata('flash'); ?>
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
@@ -27,7 +27,6 @@
 					 <th scope="col">#</th>
 					 <th scope="col">Nama</th>
 					 <th scope="col">No. HP</th>
-					 <th scope="col">Saldo</th>
 					 <th scope="col">Aksi</th>
 				 </tr>
 			</thead>
@@ -37,9 +36,8 @@
 					 <th scope="row"><?= $i ?></th>
 					 <td><?= $kns["nama"] ?></td>
 					 <td><?= $kns["no_hp"] ?></td>
-					 <td><?= $kns["saldo"] ?></td>
 					 <td>
-						<button type="button" class="btn btn-success">Edit</button>
+						<a href="<?= base_url(); ?>konsumen/edit/<?= $kns["no"]; ?>" class="btn btn-success">Edit</a>
 						<a href="<?= base_url(); ?>konsumen/hapus/<?= $kns["no"]; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda ingin menghapus data ini?');">Hapus</a>
 					</td>
 				 </tr>

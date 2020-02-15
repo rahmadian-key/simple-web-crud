@@ -13,15 +13,16 @@
 					</div>
 				<?php } ?>
 					<form action="" method="post">
+							<input type="hidden" name="no" value="<?= $konsumen["no"]; ?>" /> 
 						<div class="form-group">
 							<label for="nama">Nama</label>
-							<input type="text" class="form-control" id="nama" name="nama" />
+							<input type="text" class="form-control" id="nama" name="nama" value="<?= $konsumen['nama']; ?>"/>
 						</div>
 						<div class="form-group">
 							<label for="no_hp">No. HP</label>
-							<input type="text" class="form-control" id="no_hp" name="no_hp" />
+							<input type="text" class="form-control" id="no_hp" name="no_hp" value="<?= $konsumen['no_hp'];?>"/>
 						</div>
-						<button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
+						<button type="submit" name="edit" class="btn btn-primary float-right">Edit Data</button>
 					</form>
 				</div>
 			</div>

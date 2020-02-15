@@ -13,9 +13,7 @@
 		{
 
 			$data = [
-				'nama_brg' => $this->input->post('nama', true),
-				'harga' => $this->input->post('harga', true),
-				'stok' => $this->input->post('stok', true)		
+				'nama_brg' => $this->input->post('nama', true),	
 	    	];
 
     		$this->db->insert('data_barang', $data);
@@ -25,6 +23,21 @@
 		{
 			$this->db->where('no', $no);
 			$this->db->delete('data_barang');
+		}
+
+		public function getBarangbyNo($no)
+		{
+			return $this->db->get_where('data_barang',['no' => $no])->row_array();
+		}
+
+		public function editDataBarang()
+		{
+
+		$data = [
+	        'nama_brg' => $this->input->post('nama_brg', true),
+    	];
+    	$this->db->where('no', $this->input->post('no'));
+    	$this->db->update('data_barang', $data);
 		}
 	}
 
